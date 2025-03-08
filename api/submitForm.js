@@ -1,4 +1,5 @@
 // reCaptcha
+require('dotenv').config();
 const express = require('express');
 const fetch = require('node-fetch');
 const router = express.Router();
@@ -8,7 +9,7 @@ router.post('/submitForm', async (req, res) => {
     const { userFirstName, userLastName, userZipCode, 'g-recaptcha-response': recaptchaToken } = req.body;
 
     // Verify reCAPTCHA token
-    const secretKey = '6Lft5OwqAAAAAFEgF_qFuZgZ3xycTwveaIHAy3lN';
+    const secretKey = process.env.RECAPTCHA_SECRET_KEY;
     const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptchaToken}`;
 
     const response = await fetch(verificationUrl, { method: 'POST' });
