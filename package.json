@@ -1,0 +1,27 @@
+{
+  "name": "widriveon",
+  "version": "1.0.0",
+  "description": "Petition for Reform",
+  "main": "server.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "start",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michelle-burton/WiDriveOn.git"
+  },
+  "author": "Michelle Burton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michelle-burton/WiDriveOn/issues"
+  },
+  "homepage": "https://github.com/michelle-burton/WiDriveOn#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "node-fetch": "^3.3.2"
+  }
+}

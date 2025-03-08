@@ -1,4 +1,10 @@
 
+document.addEventListener('DOMContentLoaded', () => {
+    var onloadCallback = function() {
+        alert("grecaptcha is ready!");
+    };
+
+
 const representatives = {
         "53223": { repName: "Rep. Russell A. Goodwin", repEmail: "Rep.Goodwin@legis.wisconsin.gov" },
         "53002": { repName: "Rep. Jane Smith", repEmail: "janesmith@example.com" },
@@ -18,3 +24,8 @@ function updateRepresentativeInfo() {
     document.getElementById('userLastNameDisplay').textContent = userLastName;
     document.getElementById('userZipCodeDisplay').textContent = userZipCode;
 }
+
+
+    // Attach the updateRepresentativeInfo function to the input event of the ZIP Code field
+    document.getElementById('userZipCode').addEventListener('input', updateRepresentativeInfo);
+  });  
