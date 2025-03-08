@@ -21,7 +21,7 @@
         <section>
         <h1>Reform Legisation</h1>
         <h2>Send Email to your Representative</h2>
-            <form action="/api/submitForm" method="POST">
+            <form action="/api/submitForm" method="POST" onsubmit="return validateRecaptcha()">
                 <label for="userFirstName">First Name:</label>
                 <input type="text" id="userFirstName" name="userFirstName" required><br><br>
 
@@ -59,8 +59,7 @@
            <button type="submit">Submit</button>
 	    </section>
 
-        <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="MichelleBurton" data-description="Support me on Buy me a coffee!" data-message="Thank you for your support... I live on Coffee!" data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
-
-        <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="MichelleBurton" data-description="Support me on Buy me a coffee!" data-message="Thank you for your support... I live on Coffee!" data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    <script type="text/javascript" src="js/main.js"></script>
-    </body>
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="MichelleBurton" data-description="Support me on Buy me a coffee!" data-message="Thank you for your support... I live on Coffee!" data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/main.js"></script>    </body>
     </html>

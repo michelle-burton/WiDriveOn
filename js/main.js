@@ -1,8 +1,5 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-    var onloadCallback = function() {
-        alert("grecaptcha is ready!");
-    };
 
 
 const representatives = {
@@ -28,4 +25,15 @@ function updateRepresentativeInfo() {
 
     // Attach the updateRepresentativeInfo function to the input event of the ZIP Code field
     document.getElementById('userZipCode').addEventListener('input', updateRepresentativeInfo);
-  });  
+    
+    // Validate reCAPTCHA before form submission
+    window.validateRecaptcha = function() {
+        const recaptchaResponse = grecaptcha.getResponse();
+        if (recaptchaResponse.length === 0) {
+            alert("Please complete the reCAPTCHA.");
+            return false;
+        }
+        return true;
+    };  
+
+});  
